@@ -28,3 +28,14 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
     --pow_of_var_regrowing 1
 ```
 
+## Results
+
+- WikiText-2 Perplexity comparison for sparse LLMs at 60\% sparsity rate.
+![ppl_comparison](imgs/ppl_comparison_0.6_sparsity.png)
+
+## Related Project
+
+[A Simple and Effective Pruning Approach for Large Language Models](https://github.com/locuslab/wanda)
+
+[SparseGPT: Massive Language Models Can be Accurately Pruned in One-Shot](https://github.com/ist-daslab/sparsegpt)
+
