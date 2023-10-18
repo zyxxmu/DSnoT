@@ -1,6 +1,12 @@
-# Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs
+# [Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs](https://arxiv.org/abs/2310.08915)
 
-Pytorch implementation of **DSnoT** (**D**ynamic **S**parse **no** **T**raining) [Paper](https://arxiv.org/abs/2310.08915)
+Pytorch implementation of **DSnoT** (**D**ynamic **S**parse **no** **T**raining) 
+
+## Abstract
+
+The ever-increasing large language models (LLMs), though opening a potential path for the upcoming artificial general intelligence, sadly drops a daunting obstacle on the way towards their on-device deployment. As one of the most well-established pre-LLMs approaches in reducing model complexity, network pruning appears to lag behind in the era of LLMs, due mostly to its costly fine-tuning (or re-training) necessity under the massive volumes of model parameter and training data. To close this industry-academia gap, we introduce Dynamic Sparse No Training (DSnoT), a training-free fine-tuning approach that slightly updates sparse LLMs without the expensive backpropagation and any weight updates. Inspired by the Dynamic Sparse Training, DSnoT minimizes the reconstruction error between the dense and sparse LLMs, in the fashion of performing iterative weight pruning-and-growing on top of sparse LLMs. To accomplish this purpose, DSnoT particularly takes into account the anticipated reduction in reconstruction error for pruning and growing, as well as the variance w.r.t. different input data for growing each weight. This practice can be executed efficiently in linear time since its obviates the need of backpropagation for fine-tuning LLMs. Extensive experiments on LLaMA-V1/V2, Vicuna, and OPT across various benchmarks demonstrate the effectiveness of DSnoT in enhancing the performance of sparse LLMs, especially at high sparsity levels. For instance, DSnoT is able to outperform the state-of-the-art Wanda by 26.79 perplexity at 70% sparsity with LLaMA-7B. Our paper offers fresh insights into how to fine-tune sparse LLMs in an efficient training-free manner and open new venues to scale the great potential of sparsity to LLMs. 
+
+The code can be contacted at yuxinzhang@stu.xmu.edu.cn
 
 ## Install
 
@@ -39,3 +45,13 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
 
 [SparseGPT: Massive Language Models Can be Accurately Pruned in One-Shot](https://github.com/ist-daslab/sparsegpt)
 
+## Citation
+
+if you find this repo is helpful, please cite
+```sh
+@article{zhang2023dyna,
+  title={Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs},
+  author={Yuxin Zhang, Lirui Zhao, Mingbao Lin, Yunyun Sun, Yiwu Yao, Xingjia Han, Jared Tanner, Shiwei Liu, and Rongrong Ji},
+  year={2023}
+}
+```
