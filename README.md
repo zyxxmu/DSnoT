@@ -1,6 +1,9 @@
 # [Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs](https://arxiv.org/abs/2310.08915)
 
 Pytorch implementation of **DSnoT** (**D**ynamic **S**parse **no** **T**raining).
+<p align="center">
+  <img src="imgs/framework.png" width="300">
+</p>
 
 ## Abstract
 
@@ -38,6 +41,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py \
 
 - WikiText-2 Perplexity comparison for sparse LLMs at 60\% sparsity rate.
 ![ppl_comparison](imgs/ppl_comparison_0.6_sparsity.png)
+- WikiText-2 Perplexity **(left)** and running time **(right)** of different methods for pruning
+LLaMA at 60% sparsity rate.
+![ppl_and_running_time](imgs/wiki_ppl_and_running_time.png)
 
 ## Related Project
 
