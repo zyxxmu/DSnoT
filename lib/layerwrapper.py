@@ -21,6 +21,8 @@ class WrappedGPT:
         self.nsamples = 0
 
         self.initial_method = initial_method
+        if self.initial_method == "sparsegpt":
+            self.H = torch.zeros((self.columns, self.columns), device=self.dev)
 
         self.scaler_row = torch.zeros((self.columns), device=self.dev)
         self.sum_metric_row = torch.zeros((self.columns), device=self.dev)
