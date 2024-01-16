@@ -1,6 +1,6 @@
 # [Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs](https://arxiv.org/abs/2310.08915)
 
-Pytorch implementation of **DSnoT** (**D**ynamic **S**parse **no** **T**raining).
+Pytorch implementation of our paper accepted by ICLR 2024 -- **DSnoT** (**D**ynamic **S**parse **no** **T**raining).
 <p align="center">
   <img src="imgs/framework.png" width="300">
 </p>
